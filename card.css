@@ -1,0 +1,172 @@
+@import url("https://fonts.cdnfonts.com/css/samsung-sharp-sans-regular");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Samsung Sharp Sans Bold", sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  background-color: #000000;
+}
+
+.card_container {
+  perspective: 1000px;
+  width: 392px;
+  height: 600px;
+  margin: 70px auto;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.card_container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.frontcard,
+.backcard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgb(0, 209, 59);
+  overflow: hidden;
+}
+
+.frontcard {
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.instagram-id {
+  color: white;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instagram-id i {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.instagram-id h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.backcard {
+  position: absolute;
+  padding: 2px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6fa4ff98 40%, #e6d042b5 50%, #e1306c 65%, #c13584 80%, #833ab4 90%, #405de6 100%);
+  background-size: 400% 400%;
+  animation: flow-border 10s ease infinite;
+  transform: rotateY(180deg);
+}
+
+.backcard-content {
+  background: linear-gradient(145deg, #8ebbfb38, #121212);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.name {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: #ff0090;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.514);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #fd0000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.514);
+}
+
+.description {
+  font-size: 1rem;
+  color: #fbfbfb;
+  margin-bottom: 15px;
+}
+
+strong {
+  color: #00f7ff;
+  font-weight: 400;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  background: linear-gradient(45deg, #fd1d1d, #e1306c);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.instagram-preview {
+  margin-top: 20px;
+  width: 100%;
+  height: 74%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+@keyframes flow-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
